@@ -11,17 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-       .nav-link { transition: color 0.3s, border-color 0.3s; }
-       .nav-link.active { color: #0d9488; border-bottom-color: #0d9488; }
-       .content-section { display: none; }
-       .content-section.active { display: block; animation: fadeIn 0.5s; }
+        .nav-link { transition: color 0.3s, border-color 0.3s; }
+        .nav-link.active { color: #0d9488; border-bottom-color: #0d9488; }
+        .content-section { display: none; }
+        .content-section.active { display: block; animation: fadeIn 0.5s; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-       .chart-container { position: relative; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; height: 400px; max-height: 50vh; }
-       .info-card { transition: transform 0.3s, box-shadow 0.3s; }
-       .info-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
-       .diagram-element { cursor: pointer; transition: background-color 0.3s, border-color 0.3s; }
-       .diagram-element:hover { background-color: #f0fdfa; border-color: #14b8a6; }
-       .connector { position: absolute; background-color: #9ca3af; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; height: 400px; max-height: 50vh; }
+        .info-card { transition: transform 0.3s, box-shadow 0.3s; }
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+        .diagram-element { cursor: pointer; transition: background-color 0.3s, border-color 0.3s; }
+        .diagram-element:hover { background-color: #f0fdfa; border-color: #14b8a6; }
+        .connector { position: absolute; background-color: #9ca3af; }
     </style>
 </head>
 <body class="bg-stone-50 text-slate-800">
@@ -34,9 +34,8 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#" data-target="pengenalan-ringkas" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 border-b-2 border-transparent">Pengenalan</a>
-                        <a href="#" data-target="latar-belakang" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 border-b-2 border-transparent">Latar Belakang Kajian</a>
-                        <a href="#" data-target="struktur-model-ikbar" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 border-b-2 border-transparent">Struktur Model IKBAR</a>
+                        <a href="#" data-target="pengenalan" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 border-b-2 border-transparent">Pengenalan</a>
+                        <a href="#" data-target="model-ikbar" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 border-b-2 border-transparent">Model IKBAR</a>
                         <a href="#" data-target="cabaran" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 border-b-2 border-transparent">Cabaran & Peluang</a>
                         <a href="#" data-target="strategi" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 border-b-2 border-transparent">Strategi Inovatif</a>
                         <a href="#" data-target="kajian" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 hover:text-teal-600 border-b-2 border-transparent">Kerangka Kajian</a>
@@ -54,9 +53,8 @@
         </nav>
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#" data-target="pengenalan-ringkas" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-teal-600 hover:bg-gray-50">Pengenalan</a>
-                <a href="#" data-target="latar-belakang" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-teal-600 hover:bg-gray-50">Latar Belakang Kajian</a>
-                <a href="#" data-target="struktur-model-ikbar" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-teal-600 hover:bg-gray-50">Struktur Model IKBAR</a>
+                <a href="#" data-target="pengenalan" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-teal-600 hover:bg-gray-50">Pengenalan</a>
+                <a href="#" data-target="model-ikbar" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-teal-600 hover:bg-gray-50">Model IKBAR</a>
                 <a href="#" data-target="cabaran" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-teal-600 hover:bg-gray-50">Cabaran & Peluang</a>
                 <a href="#" data-target="strategi" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-teal-600 hover:bg-gray-50">Strategi Inovatif</a>
                 <a href="#" data-target="kajian" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-teal-600 hover:bg-gray-50">Kerangka Kajian</a>
@@ -66,7 +64,7 @@
     </header>
 
     <main class="container mx-auto p-4 sm:p-6 lg:p-8">
-        <section id="pengenalan-ringkas" class="content-section">
+        <section id="pengenalan" class="content-section">
             <div class="text-center bg-white p-8 rounded-xl shadow-sm border border-slate-200">
                 <h1 class="text-4xl font-bold text-teal-700 mb-2">Model Pembelajaran Bahasa Arab IKBAR</h1>
                 <p class="text-xl text-slate-600 mb-6">Integrasi Pendekatan CLIL dan Dasar Pendidikan Rabbani Kelantan (DPRK)</p>
@@ -90,52 +88,7 @@
             </div>
         </section>
 
-        <section id="latar-belakang" class="content-section">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold text-slate-800 mb-2">Latar Belakang Kajian</h2>
-                <p class="max-w-3xl mx-auto text-slate-500">Bahagian ini meneroka landskap semasa pendidikan Bahasa Arab di Malaysia, falsafah Dasar Pendidikan Rabbani Kelantan (DPRK), pendekatan CLIL, serta model-model pembangunan pengajaran yang relevan.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8">
-                <h3 class="text-2xl font-semibold text-teal-700 mb-4">Landskap Pembelajaran Bahasa Arab sebagai Bahasa Kedua di Malaysia</h3>
-                <p class="text-slate-600 text-justify mb-4">Pembelajaran Bahasa Arab sebagai Bahasa Kedua (ASL) di Malaysia telah mengalami perkembangan signifikan, kini tersebar luas merentasi pelbagai peringkat pendidikan, termasuk sekolah, institut, dan universiti. Bahasa Arab diiktiraf sebagai elemen penting dalam meningkatkan kefasihan linguistik dalam kalangan pelajar yang pelbagai, melangkaui konteks pendidikan Islam semata-mata untuk merangkumi landskap sosioekonomi global yang lebih luas. Secara sejarah, peranan Bahasa Arab dalam pemahaman agama telah mengakar umbi kuat, dengan penggunaannya dalam solat dan pendidikan Islam. Formalisasi dan pengembangan Bahasa Arab dalam sistem pendidikan kebangsaan ditandai dengan dekri Kementerian Pendidikan Malaysia pada tahun 1998 untuk mengajar Bahasa Arab di sekolah rendah. </p>
-                <p class="text-slate-600 text-justify mb-4">Metodologi pengajaran ASL semasa di Malaysia sering kali cenderung kepada kaedah berpusatkan guru dan berasaskan terjemahan, di mana pelajar kurang terlibat secara aktif dalam interaksi dan komunikasi. Kekurangan aktiviti komunikasi dan peluang untuk berinteraksi menyebabkan pelajar sering tidak mencapai tahap interaksi dan komunikasi yang berkesan. Halangan pembelajaran yang signifikan termasuk tahap kecekapan Bahasa Arab yang rendah, terutamanya dalam perbendaharaan kata, serta kekurangan motivasi dan keyakinan diri untuk bertutur Bahasa Arab. </p>
-                <p class="text-slate-600 text-justify mb-4">Di peringkat pengajian tinggi, penyelidikan berkaitan pendidikan Bahasa Arab di Malaysia sering menumpukan kepada keberkesanan kurikulum, kaedah pengajaran inovatif, pembangunan bahan bantu mengajar digital, serta analisis cabaran dan motivasi pelajar universiti. Kajian-kajian ini kerap melibatkan analisis keperluan, penilaian program, dan pembangunan intervensi pedagogi untuk meningkatkan kemahiran komunikasi, tatabahasa, dan kefahaman teks Arab klasik dan moden. Institusi seperti Universiti Islam Antarabangsa Malaysia (IIUM), Universiti Malaya (UM), dan Universiti Sains Islam Malaysia (USIM) secara aktif menjalankan penyelidikan dalam bidang ini, menyumbang kepada pemahaman yang lebih mendalam tentang dinamika pembelajaran ASL dalam konteks Islam dan sekular. </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8">
-                <h3 class="text-2xl font-semibold text-teal-700 mb-4">Dasar Pendidikan Rabbani Kelantan (DPRK)</h3>
-                <p class="text-slate-600 text-justify mb-4">Dasar Pendidikan Rabbani Kelantan (DPRK) telah dilancarkan pada 25 Februari 2018, sebagai inisiatif pembangunan pendidikan yang berakar umbi daripada Pelan Strategik Merakyatkan Membangun Bersama Islam (MMBI). Dasar ini dirangka untuk meluaskan skop pendidikan melangkaui konteks pendidikan Islam semata-mata, merangkumi bidang-bidang lain. DPRK berlandaskan sembilan prinsip teras yang membimbing falsafah pendidikannya: Ilmu Bermatlamatkan Allah, Keutamaan Ilmu & Kefaqihan, Menjadi Insan Mulia, Amalan & Penyebaran Ilmu, Pembelajaran Berterusan, Pembangunan & Reformasi Masyarakat, Tanggungjawab Bersama, Sejajar Realiti Semasa, dan Kelestarian Ilmu. </p>
-                <p class="text-slate-600 text-justify">Prinsip-prinsip DPRK ini menggariskan pandangan pendidikan yang holistik dan bersepadu, yang melangkaui pencapaian akademik semata-mata, sebaliknya bertujuan untuk pembangunan rohani, moral, dan kemasyarakatan yang menyeluruh. Konsep "Rabbani" itu sendiri, yang bermaksud "ketuhanan" atau "mengabdikan diri kepada Tuhan disertai ilmu yang sempurna serta beramal dengannya," menyiratkan orientasi ilahi dan rasa tanggungjawab yang mendalam. </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8">
-                <h3 class="text-2xl font-semibold text-teal-700 mb-4">Pendekatan Pembelajaran Bersepadu Kandungan dan Bahasa (CLIL)</h3>
-                <p class="text-slate-600 text-justify mb-4">Pendekatan Pembelajaran Bersepadu Kandungan dan Bahasa (CLIL) ialah kerangka pedagogi dwi-fokus di mana bahasa tambahan digunakan untuk mengajar kedua-dua kandungan mata pelajaran dan bahasa itu sendiri secara serentak. Kerangka teras CLIL dibina berdasarkan empat komponen utama, sering dirujuk sebagai 4C: Kandungan (Content), Kognisi (Cognition), Komunikasi (Communication), dan Budaya (Culture). </p>
-                <p class="text-slate-600 text-justify">CLIL menawarkan pelbagai faedah dalam pemerolehan bahasa kedua, termasuk peningkatan kefasihan bahasa, pemahaman mata pelajaran yang lebih dalam, pembangunan kognitif, kemahiran berfikir kritis, penyelesaian masalah, dan kesedaran metakognitif. Pendekatan ini juga memupuk kecekapan antara budaya, empati, toleransi, dan penghargaan terhadap kepelbagaian global. Motivasi pelajar cenderung meningkat dalam persekitaran CLIL kerana mereka berminat dengan kandungan yang diajar. </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                <h3 class="text-2xl font-semibold text-teal-700 mb-4">Model-model Pembangunan Model Pengajaran</h3>
-                <p class="text-slate-600 mb-4">Pembangunan model pengajaran, terutamanya dalam konteks pendidikan bahasa, sering berpandukan kepada model-model reka bentuk pengajaran (instructional design models) yang sistematik. Model-model ini menyediakan kerangka kerja berstruktur untuk merancang, membangunkan, melaksanakan, dan menilai keberkesanan intervensi pendidikan.</p>
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="text-xl font-medium text-purple-600 mb-2">Model ADDIE</h4>
-                        <p class="text-slate-500">Salah satu model reka bentuk pengajaran yang paling dikenali dan digunakan secara meluas. ADDIE adalah akronim untuk lima fasa: **A**nalysis (Analisis), **D**esign (Reka Bentuk), **D**evelopment (Pembangunan), **I**mplementation (Pelaksanaan), dan **E**valuation (Penilaian). Model ini bersifat linear tetapi juga iteratif, membolehkan penambahbaikan pada setiap fasa berdasarkan maklum balas. Penyelidik sering menggunakan ADDIE sebagai panduan untuk membangunkan kurikulum, bahan pengajaran, atau keseluruhan model pedagogi. </p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-medium text-purple-600 mb-2">Model Dick and Carey</h4>
-                        <p class="text-slate-500">Model ini menekankan hubungan antara komponen pengajaran dan hasil pembelajaran. Ia melibatkan langkah-langkah seperti mengenal pasti matlamat pengajaran, menganalisis pengajaran, menganalisis pelajar dan konteks, menulis objektif prestasi, membangunkan instrumen penilaian, membangunkan strategi pengajaran, membangunkan dan memilih bahan pengajaran, mereka bentuk dan menjalankan penilaian formatif, menyemak pengajaran, dan mereka bentuk dan menjalankan penilaian sumatif. Model ini sangat berorientasikan sistem dan hasil. </p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-medium text-purple-600 mb-2">Model Kemp (Model Reka Bentuk Sistem Pengajaran Kemp)</h4>
-                        <p class="text-slate-500">Model ini adalah lebih fleksibel dan tidak linear berbanding ADDIE atau Dick and Carey. Ia menekankan pendekatan berpusatkan pelajar dan kitaran berterusan dalam reka bentuk. Komponen utamanya termasuk mengenal pasti masalah pengajaran, ciri-ciri pelajar, objektif pembelajaran, kandungan mata pelajaran, strategi pengajaran, mesej pengajaran, perkhidmatan sokongan, penilaian, dan prasyarat. Model ini sering digambarkan sebagai model kitaran yang membolehkan pereka bentuk kembali ke mana-mana fasa pada bila-bila masa. </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="struktur-model-ikbar" class="content-section">
+        <section id="model-ikbar" class="content-section">
             <div class="text-center mb-10">
                 <h2 class="text-3xl font-bold text-slate-800 mb-2">Struktur Model IKBAR</h2>
                 <p class="max-w-3xl mx-auto text-slate-500">Model IKBAR menggabungkan dua kerangka utama: Dasar Pendidikan Rabbani Kelantan (DPRK) sebagai asas falsafah dan Pembelajaran Bersepadu Kandungan dan Bahasa (CLIL) sebagai pendekatan pedagogi. Klik pada setiap elemen untuk maklumat lanjut.</p>
@@ -191,7 +144,6 @@
                         <li>Kurang penekanan pada kemahiran komunikasi praktikal.</li>
                         <li>Kerumitan linguistik seperti diglossia (perbezaan antara bahasa rasmi dan dialek).</li>
                         <li>Kekurangan bahan bantu mengajar yang sesuai dan menarik.</li>
-                        <li>Kelayakan guru yang tidak mencukupi dan kurang pemahaman CLIL. </li>
                     </ul>
                 </div>
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
@@ -203,7 +155,6 @@
                         <li>Pendekatan CLIL yang terbukti berkesan dalam konteks lain.</li>
                         <li>Potensi teknologi pendidikan (AI, VR, Gamifikasi) untuk meningkatkan penglibatan.</li>
                         <li>Kandungan Islam yang kaya dan autentik sebagai bahan pembelajaran yang bermakna.</li>
-                        <li>Penyelidikan aktif di peringkat pengajian tinggi dalam pendidikan Bahasa Arab. </li>
                     </ul>
                 </div>
             </div>
@@ -218,22 +169,22 @@
                 <div class="info-card bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center">
                     <div class="text-4xl mb-3">🎮</div>
                     <h3 class="text-xl font-semibold mb-2">Gamifikasi</h3>
-                    <p class="text-slate-500 text-sm">Menggunakan elemen permainan untuk meningkatkan motivasi, penglibatan, dan penguasaan perbendaharaan kata serta tatabahasa. </p>
+                    <p class="text-slate-500 text-sm">Menggunakan elemen permainan untuk meningkatkan motivasi, penglibatan, dan penguasaan perbendaharaan kata serta tatabahasa.</p>
                 </div>
                 <div class="info-card bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center">
                     <div class="text-4xl mb-3">🤖</div>
                     <h3 class="text-xl font-semibold mb-2">Tutor Kecerdasan Buatan (AI)</h3>
-                    <p class="text-slate-500 text-sm">Menawarkan pembelajaran peribadi, latihan perbualan, dan maklum balas tatabahasa segera untuk membantu pelajar mengatasi kerumitan bahasa. </p>
+                    <p class="text-slate-500 text-sm">Menawarkan pembelajaran peribadi, latihan perbualan, dan maklum balas tatabahasa segera untuk membantu pelajar mengatasi kerumitan bahasa.</p>
                 </div>
                  <div class="info-card bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center">
                     <div class="text-4xl mb-3">🕶️</div>
                     <h3 class="text-xl font-semibold mb-2">Realiti Maya (VR)</h3>
-                    <p class="text-slate-500 text-sm">Mencipta pengalaman pembelajaran yang mendalam (immersive) untuk mempelajari sejarah, ritual, dan budaya Islam secara autentik. </p>
+                    <p class="text-slate-500 text-sm">Mencipta pengalaman pembelajaran yang mendalam (immersive) untuk mempelajari sejarah, ritual, dan budaya Islam secara autentik.</p>
                 </div>
                 <div class="info-card bg-white p-6 rounded-xl shadow-sm border border-slate-200 text-center">
                     <div class="text-4xl mb-3">📱</div>
                     <h3 class="text-xl font-semibold mb-2">Aplikasi Mudah Alih</h3>
-                    <p class="text-slate-500 text-sm">Menyediakan akses mudah kepada sumber pembelajaran, latihan, dan aktiviti interaktif pada bila-bila masa dan di mana sahaja. </p>
+                    <p class="text-slate-500 text-sm">Menyediakan akses mudah kepada sumber pembelajaran, latihan, dan aktiviti interaktif pada bila-bila masa dan di mana sahaja.</p>
                 </div>
             </div>
         </section>
@@ -253,7 +204,7 @@
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
                     <h3 class="text-xl font-semibold mb-3">Soalan Kajian Utama</h3>
                     <ul class="list-disc list-inside space-y-2 text-slate-600">
-                       <li>Bagaimanakah kerangka IKBAR diintegrasikan dengan teori pembelajaran bahasa kedua yang relevan?</li>
+                       <li>Bagaimanakah kerangka IKBAR diintegrasikan dengan teori pembelajaran bahasa kedua?</li>
                         <li>Adakah perbezaan signifikan dalam pencapaian pelajar antara model IKBAR dan konvensional?</li>
                         <li>Apakah faktor yang mempengaruhi keberkesanan model IKBAR?</li>
                         <li>Bagaimanakah persepsi pihak berkepentingan terhadap model ini?</li>
@@ -294,7 +245,7 @@
                     <p class="text-slate-500">Menyediakan kerangka kerja yang jelas untuk pembangunan kurikulum Bahasa Arab yang bersepadu dan moden.</p>
                 </div>
                  <div class="info-card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                    <h3 class="lg font-semibold text-teal-700 mb-2">Pembangunan Profesional Guru</h3>
+                    <h3 class="text-lg font-semibold text-teal-700 mb-2">Pembangunan Profesional Guru</h3>
                     <p class="text-slate-500">Menjadi asas kepada program latihan guru yang komprehensif untuk meningkatkan kemahiran pedagogi guru Bahasa Arab.</p>
                 </div>
                  <div class="info-card bg-white p-6 rounded-xl shadow-sm border border-slate-200">
@@ -307,7 +258,7 @@
 
     <footer class="bg-white mt-12 border-t">
         <div class="container mx-auto py-4 px-6 text-center text-slate-500 text-sm">
-            <p>&copy; 2025 Visualisasi Model Penyelidikan IKBAR. Dihasilkan untuk tujuan ilustrasi akademik.</p>
+            <p>© 2025 Visualisasi Model Penyelidikan IKBAR. Dihasilkan untuk tujuan ilustrasi akademik.</p>
         </div>
     </footer>
 
@@ -315,7 +266,7 @@
         <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[80vh] overflow-y-auto">
             <div class="p-5 border-b flex justify-between items-center">
                 <h3 id="modal-title" class="text-lg font-semibold">Maklumat Elemen</h3>
-                <button id="close-modal-button" class="text-slate-400 hover:text-slate-800">&times;</button>
+                <button id="close-modal-button" class="text-slate-400 hover:text-slate-800">×</button>
             </div>
             <div id="modal-body" class="p-5 text-slate-600">
             </div>
@@ -418,13 +369,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 labels: ['Pencapaian Kognitif', 'Pencapaian Afektif', 'Pencapaian Psikomotor'],
                 datasets: [{
                     label: 'Model Konvensional',
-                    data: ,
+                    data: [65, 58, 60],
                     backgroundColor: 'rgba(100, 116, 139, 0.6)',
                     borderColor: 'rgba(100, 116, 139, 1)',
                     borderWidth: 1
                 }, {
                     label: 'Model IKBAR',
-                    data: ,
+                    data: [85, 82, 88],
                     backgroundColor: 'rgba(13, 148, 136, 0.6)',
                     borderColor: 'rgba(13, 148, 136, 1)',
                     borderWidth: 1
@@ -450,12 +401,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     tooltip: {
                         callbacks: {
                             label: function(context) {
-                                let label = context.dataset.label |
-| '';
+                                let label = context.dataset.label || '';
                                 if (label) {
                                     label += ': ';
                                 }
-                                if (context.parsed.y!== null) {
+                                if (context.parsed.y !== null) {
                                     label += context.parsed.y + '%';
                                 }
                                 return label;
@@ -467,9 +417,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    switchTab('pengenalan-ringkas'); // Set initial active tab
+    switchTab('pengenalan');
 });
 </script>
 
 </body>
 </html>
+
+
